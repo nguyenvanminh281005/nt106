@@ -14,9 +14,9 @@ using Newtonsoft.Json;
 namespace BAI7
 
 {
-    public partial class RandomDishForm : Form
+    public partial class Homnayangi : Form
     {
-        public RandomDishForm(MonAn monan)
+        public Homnayangi(MonAn monan)
         {
             InitializeComponent();
             if (label1 != null) label1.Text = monan.TenMonAn;
@@ -42,6 +42,14 @@ namespace BAI7
 
         }
 
-      
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

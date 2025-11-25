@@ -126,7 +126,7 @@ namespace BAI7
                 int index = rnd.Next(currentListCache.Count);
                 MonAn selectedDish = currentListCache[index];
 
-                RandomDishForm frm = new RandomDishForm(selectedDish);
+                Homnayangi frm = new Homnayangi(selectedDish);
                 frm.ShowDialog();
             }
             else
