@@ -11,7 +11,6 @@ namespace BAI7
     public partial class MainForm : Form
     {
         // 1. KHAI BÁO BIẾN
-        ApiService api = new ApiService();
         int currentPage = 1;
         int pageSize = 10; // Số lượng món mỗi trang
 
@@ -46,7 +45,7 @@ namespace BAI7
             flowPanelAll.Controls.Clear();
 
             // Gọi API lấy dữ liệu
-            var result = await api.GetDishes(currentPage, pageSize);
+            var result = await ApiService.Instance.GetDishes(currentPage, pageSize);
 
             if (result != null && result.Data != null)
             {
@@ -68,7 +67,7 @@ namespace BAI7
 
             // Mẹo: Lấy số lượng lớn (100) để về lọc phía Client
             // Vì API Lab thường chưa có chức năng lọc theo User
-            var result = await api.GetDishes(1, 100);
+            var result = await ApiService.Instance.GetDishes(1, 100);
 
             if (result != null && result.Data != null)
             {
@@ -109,7 +108,7 @@ namespace BAI7
         // 7. NÚT "THÊM MÓN ĂN" 
         private async void button2_Click(object sender, EventArgs e)
         {
-            AddDishForm frm = new AddDishForm();
+            AddDishForm frm = new AddDishForm(currentUsername);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 if (tabControl1.SelectedTab == tabPage1) await LoadDataAll();
