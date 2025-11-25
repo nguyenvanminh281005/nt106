@@ -6,9 +6,6 @@ namespace BAI7
 {
     public partial class LoginForm : Form
     {
-        // 👇 1. KHAI BÁO BIẾN API Ở ĐÂY THÌ MỚI DÙNG ĐƯỢC
-        ApiService api = new ApiService();
-
         public LoginForm()
         {
             InitializeComponent();
@@ -21,14 +18,14 @@ namespace BAI7
 
             button1.Enabled = false; // Khóa nút khi đang xử lý
 
-            // Giờ biến api đã có nên dòng này chạy OK
-            bool success = await api.Login(user, pass);
+            // Sử dụng singleton instance
+            bool success = await ApiService.Instance.Login(user, pass);
 
             button1.Enabled = true; // Mở lại nút
 
             if (success)
             {
-                MessageBox.Show("Đăng nhập thành công!");
+                // MessageBox.Show("Đăng nhập thành công!");
 
                 // 👇 2. SỬA LỖI: Truyền biến 'user' vào trong ngoặc
                 // Vì MainForm yêu cầu phải có tên người dùng mới chịu mở

@@ -1,4 +1,7 @@
-﻿namespace BAI7
+﻿using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace BAI7
 {
     partial class Homnayangi
     {
@@ -118,4 +121,4 @@
         private Label label4;
 #nullable restore
     }
-}   
+}

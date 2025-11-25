@@ -9,12 +9,25 @@ namespace BAI7
 {
     public class MonAn
     {
-        public int Id { get; set; } // Hoặc string tùy API
+        [JsonProperty("id")]
+        public int Id { get; set; }
+        
+        [JsonProperty("ten_mon_an")]
         public string TenMonAn { get; set; } = string.Empty;
+        
+        [JsonProperty("gia")]
         public decimal Gia { get; set; }
+        
+        [JsonProperty("dia_chi")]
         public string DiaChi { get; set; } = string.Empty;
-        public string HinhAnh { get; set; } = string.Empty; // URL hình ảnh
+        
+        [JsonProperty("hinh_anh")]
+        public string HinhAnh { get; set; } = string.Empty; // URL hoặc base64 hình ảnh
+        
+        [JsonProperty("mo_ta")]
         public string MoTa { get; set; } = string.Empty;
+        
+        [JsonProperty("nguoi_dong_gop")]
         public string NguoiDongGop { get; set; } = string.Empty;
     }
     public class PageResult<T>

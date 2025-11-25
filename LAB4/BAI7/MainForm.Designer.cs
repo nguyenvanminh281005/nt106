@@ -106,6 +106,7 @@
             // 
             // flowPanelAll
             // 
+            flowPanelAll.AutoScroll = true;
             flowPanelAll.Location = new Point(3, 3);
             flowPanelAll.Name = "flowPanelAll";
             flowPanelAll.Size = new Size(554, 349);
@@ -126,6 +127,7 @@
             // 
             // flowPanelMe
             // 
+            flowPanelMe.AutoScroll = true;
             flowPanelMe.Location = new Point(1, 3);
             flowPanelMe.Name = "flowPanelMe";
             flowPanelMe.Size = new Size(554, 333);

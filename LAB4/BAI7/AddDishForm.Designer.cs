@@ -38,9 +38,14 @@
             label6 = new Label();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            panelImage = new Panel();
+            pictureBox1 = new PictureBox();
+            btnSelectImage = new Button();
+            lblImagePath = new Label();
             textBox5 = new TextBox();
             button2 = new Button();
+            panelImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -57,14 +62,14 @@
             textBox1.Location = new Point(145, 106);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(238, 27);
-            textBox1.TabIndex = 1;
+            textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(176, 459);
+            button1.Location = new Point(176, 520);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
-            button1.TabIndex = 2;
+            button1.TabIndex = 5;
             button1.Text = " Clear";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -99,7 +104,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(38, 290);
+            label5.Location = new Point(38, 270);
             label5.Name = "label5";
             label5.Size = new Size(75, 20);
             label5.TabIndex = 6;
@@ -108,7 +113,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(38, 359);
+            label6.Location = new Point(38, 396);
             label6.Name = "label6";
             label6.Size = new Size(55, 20);
             label6.TabIndex = 7;
@@ -119,39 +124,74 @@
             textBox2.Location = new Point(145, 164);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(238, 27);
-            textBox2.TabIndex = 8;
+            textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
             textBox3.Location = new Point(145, 227);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(238, 27);
-            textBox3.TabIndex = 9;
+            textBox3.TabIndex = 2;
             textBox3.TextChanged += textBox3_TextChanged;
             // 
-            // textBox4
+            // panelImage
             // 
-            textBox4.Location = new Point(145, 283);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(238, 27);
-            textBox4.TabIndex = 10;
-            textBox4.TextChanged += textBox4_TextChanged;
+            panelImage.AllowDrop = true;
+            panelImage.BorderStyle = BorderStyle.FixedSingle;
+            panelImage.Controls.Add(pictureBox1);
+            panelImage.Controls.Add(btnSelectImage);
+            panelImage.Controls.Add(lblImagePath);
+            panelImage.Location = new Point(145, 270);
+            panelImage.Name = "panelImage";
+            panelImage.Size = new Size(238, 120);
+            panelImage.TabIndex = 3;
+            panelImage.DragDrop += panelImage_DragDrop;
+            panelImage.DragEnter += panelImage_DragEnter;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(80, 80);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // btnSelectImage
+            // 
+            btnSelectImage.Location = new Point(89, 30);
+            btnSelectImage.Name = "btnSelectImage";
+            btnSelectImage.Size = new Size(140, 29);
+            btnSelectImage.TabIndex = 0;
+            btnSelectImage.Text = "Chọn hình ảnh";
+            btnSelectImage.UseVisualStyleBackColor = true;
+            btnSelectImage.Click += btnSelectImage_Click;
+            // 
+            // lblImagePath
+            // 
+            lblImagePath.AutoSize = true;
+            lblImagePath.Location = new Point(3, 90);
+            lblImagePath.Name = "lblImagePath";
+            lblImagePath.Size = new Size(180, 20);
+            lblImagePath.TabIndex = 1;
+            lblImagePath.Text = "Kéo thả hoặc chọn file";
+            lblImagePath.ForeColor = Color.Gray;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(145, 335);
+            textBox5.Location = new Point(145, 396);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(238, 103);
-            textBox5.TabIndex = 11;
+            textBox5.TabIndex = 4;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
             // button2
             // 
-            button2.Location = new Point(324, 459);
+            button2.Location = new Point(289, 520);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
-            button2.TabIndex = 12;
+            button2.TabIndex = 6;
             button2.Text = "Thêm";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -160,10 +200,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(430, 510);
+            ClientSize = new Size(430, 570);
             Controls.Add(button2);
             Controls.Add(textBox5);
-            Controls.Add(textBox4);
+            Controls.Add(panelImage);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(label6);
@@ -176,6 +216,9 @@
             Controls.Add(label1);
             Name = "AddDishForm";
             Text = "AddDishForm";
+            panelImage.ResumeLayout(false);
+            panelImage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -192,7 +235,10 @@
         private Label label6;
         private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
+        private Panel panelImage;
+        private PictureBox pictureBox1;
+        private Button btnSelectImage;
+        private Label lblImagePath;
         private TextBox textBox5;
         private Button button2;
     }

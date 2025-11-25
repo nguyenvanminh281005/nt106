@@ -96,11 +96,11 @@ namespace BAI7
         // 6. XỬ LÝ CHUYỂN TAB
         private async void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab == tabPage1) 
+            if (tabControl1.SelectedTab == tabPage1)
             {
                 await LoadDataAll();
             }
-            else if (tabControl1.SelectedTab == tabPage2) 
+            else if (tabControl1.SelectedTab == tabPage2)
             {
                 await LoadDataMe();
             }
@@ -138,7 +138,7 @@ namespace BAI7
         // 9. NÚT LOGOUT
         private void lnkLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
         private void tabPage2_Click(object sender, EventArgs e) { }
