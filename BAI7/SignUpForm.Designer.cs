@@ -84,14 +84,14 @@
             textBox2.Location = new Point(128, 68);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(298, 27);
-            textBox2.TabIndex = 17;
+            textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
             textBox1.Location = new Point(128, 33);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(298, 27);
-            textBox1.TabIndex = 16;
+            textBox1.TabIndex = 0;
             // 
             // label3
             // 
@@ -140,28 +140,28 @@
             textBox6.Location = new Point(101, 154);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(325, 27);
-            textBox6.TabIndex = 21;
+            textBox6.TabIndex = 5;
             // 
             // textBox5
             // 
             textBox5.Location = new Point(101, 114);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(325, 27);
-            textBox5.TabIndex = 20;
+            textBox5.TabIndex = 4;
             // 
             // textBox4
             // 
             textBox4.Location = new Point(101, 73);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(325, 27);
-            textBox4.TabIndex = 19;
+            textBox4.TabIndex = 3;
             // 
             // textBox3
             // 
             textBox3.Location = new Point(101, 37);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(325, 27);
-            textBox3.TabIndex = 18;
+            textBox3.TabIndex = 2;
             // 
             // radioButton2
             // 
@@ -169,7 +169,7 @@
             radioButton2.Location = new Point(241, 276);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(82, 24);
-            radioButton2.TabIndex = 15;
+            radioButton2.TabIndex = 9;
             radioButton2.TabStop = true;
             radioButton2.Text = " Female";
             radioButton2.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@
             radioButton1.Location = new Point(101, 276);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(63, 24);
-            radioButton1.TabIndex = 14;
+            radioButton1.TabIndex = 8;
             radioButton1.TabStop = true;
             radioButton1.Text = "Male";
             radioButton1.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@
             comboBox1.Location = new Point(101, 236);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(325, 28);
-            comboBox1.TabIndex = 13;
+            comboBox1.TabIndex = 7;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // dateTimePicker1
@@ -200,7 +200,7 @@
             dateTimePicker1.Location = new Point(101, 195);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(325, 27);
-            dateTimePicker1.TabIndex = 12;
+            dateTimePicker1.TabIndex = 6;
             // 
             // label10
             // 
@@ -270,7 +270,7 @@
             button1.Location = new Point(224, 549);
             button1.Name = "button1";
             button1.Size = new Size(111, 29);
-            button1.TabIndex = 3;
+            button1.TabIndex = 10;
             button1.Text = " Clear";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -280,7 +280,7 @@
             btnRegister.Location = new Point(341, 549);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(119, 29);
-            btnRegister.TabIndex = 4;
+            btnRegister.TabIndex = 11;
             btnRegister.Text = " Submit";
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += button2_Click;
